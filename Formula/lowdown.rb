@@ -1,8 +1,8 @@
 class Lowdown < Formula
   desc "Markdown translator with a troff(1) backend"
   homepage "https://kristaps.bsd.lv/lowdown/"
-  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-0.1.10.tar.gz"
-  sha256 "eef2fcb2f7779e36d0a609c0ec2eb089134057fcb1a26a93e99350a7d8c2d729"
+  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-0.2.4.tar.gz"
+  sha256 "4cc6ea072244fbad7b44faa3e028f336f3f6e9422fa9acc263d2c2c250e43a88"
 
   def install
     (buildpath/"configure.local").write <<-CFG.undent
