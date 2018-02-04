@@ -1,8 +1,8 @@
 class Mg < Formula
   desc "Small Emacs-like editor"
   homepage "https://devio.us/~bcallah/mg/"
-  url "https://devio.us/~bcallah/mg/mg-20171003.tar.gz"
-  sha256 "d6d12d4a47299a6770be65db7e1468883c1d7dbea49c02a9596d8a168f4790df"
+  url "https://devio.us/~bcallah/mg/mg-20180111.tar.gz"
+  sha256 "e0ccf97618777052aa3a0c72af673d9c3e85d3672ad443b95a2921102059d0aa"
 
   depends_on :macos => :yosemite # older versions don't support fstatat(2)
 
