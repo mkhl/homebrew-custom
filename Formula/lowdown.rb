@@ -1,17 +1,17 @@
 class Lowdown < Formula
   desc "Markdown translator with a troff(1) backend"
   homepage "https://kristaps.bsd.lv/lowdown/"
-  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-0.3.1.tar.gz"
-  sha256 "9e3796c7f819a3d28a8e304eac60da62e98fa996cae4131da971d8deaea44766"
+  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-0.4.1.tar.gz"
+  sha256 "a5fb2fa51da9c2dcbd22332e71a8b39fc838b90299e0ac8cdfffd2bc7934fcec"
 
   def install
-    (buildpath/"configure.local").write <<-CFG.undent
+    (buildpath/"configure.local").write <<~EOS
       PREFIX=#{prefix}
       INCLUDEDIR=#{include}
       BINDIR=#{bin}
       LIBDIR=#{lib}
       MANDIR=#{man}
-    CFG
+    EOS
     system "./configure"
     system "make", "install"
   end
