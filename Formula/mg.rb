@@ -1,19 +1,20 @@
 class Mg < Formula
   desc "Small Emacs-like editor"
   homepage "https://devio.us/~bcallah/mg/"
-  url "https://devio.us/~bcallah/mg/mg-20180111.tar.gz"
-  sha256 "e0ccf97618777052aa3a0c72af673d9c3e85d3672ad443b95a2921102059d0aa"
+  url "https://github.com/ibara/mg/releases/download/mg-20180927/mg-20180927.tar.gz"
+  sha256 "99b2fd2cf9d6474153d6c5769c818dd5514c147b8a8ad660a5e114bc1ebd504d"
 
   depends_on :macos => :yosemite # older versions don't support fstatat(2)
 
-  conflicts_with "mg3a", :because => "both install `mg` binaries"
-
   def install
-    system "make", "install", "PREFIX=#{prefix}", "MANDIR=#{man}"
+    system "./configure", "--prefix=#{prefix}",
+                          "--mandir=#{man}"
+    system "make"
+    system "make", "install"
   end
 
   test do
-    (testpath/"command.sh").write <<-EOS.undent
+    (testpath/"command.sh").write <<~EOS
       #!/usr/bin/expect -f
       set timeout -1
       spawn #{bin}/mg
