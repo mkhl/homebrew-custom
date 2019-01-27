@@ -1,8 +1,8 @@
 class Scdoc < Formula
   desc "simple man page generator"
   homepage "https://git.sr.ht/~sircmpwn/scdoc"
-  url "https://git.sr.ht/~sircmpwn/scdoc/archive/1.6.0.tar.gz"
-  sha256 "a396bc070c8734d7cafe3a3481c8cffacd83b3effdeb28de43e2cdac889643b1"
+  url "https://git.sr.ht/~sircmpwn/scdoc/archive/1.8.0.tar.gz"
+  sha256 "24a5800062ffc8b21b91020a3289b20824cad4b42327957bed4cd815001bc984"
   head "https://git.sr.ht/~sircmpwn/scdoc"
 
   def install
